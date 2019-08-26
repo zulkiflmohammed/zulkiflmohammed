@@ -1,0 +1,183 @@
+<!-- Author: Zulkifl Mohammed -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">  </script>
+    <script>
+        $(document).ready(function () {
+            
+            //take html tags with assigned values and set to variable.
+            //set display to the value of "blank", and add to values.
+            $('#1,#2,#3,#4,#5,#6,#7,#8,#9,#0,#add, #subtract, #multiply, #divide, #dot').click(function () {
+                var v = $(this).val();
+                var total = $('#display').val($('#display').val() + v);
+            });
+
+            //clicking equal sign evaluates the display
+            $('#equal').click(function () {
+                $('#display').val(eval($('#display').val()));
+            });
+
+            //clicking "C" sign clears the display
+            $('#clear').click(function () {
+                $('#display').val('');
+            });
+
+        });
+    </script>
+
+    <style>
+        /* give the body a darkgray background */
+        .jumbotron, body {
+            background: darkgrey;
+
+        }
+
+        /* give id 'wrapper' a width of 210px, 10px top bottom margin and auto left and right 
+        1px solid black border, 10px border radius, darkslategray background color, 5px padding and center text*/
+        #wrapper {
+            width: 210px;
+            margin: 10px auto;
+            border: 1px solid black;
+            border-radius: 10px;
+            background: darkslategray;
+            padding: 5px;
+            text-align: center;
+
+        }
+
+        /* give h3 center align and white color text  */
+        h3 {
+            color: white;
+            text-align: center;
+        }
+
+        /* give id 'display' a 75% width, auto margin, 5px border radius, 5px padding and a blanchedalmod bgrnd color */
+        #display {
+            width: 75%;
+            margin: auto;
+            border-radius: 5px;
+            padding: 5px;
+            background: blanchedalmond;
+            color: black;
+        }
+
+        /* give id 'buttons' a grid display with 4 auto columns, 5px column gap and 0px row gap and a 20px margin */
+        #buttons {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 5px 0px;
+            margin: 20px;
+        }
+
+        /* give all the buttons a 10px border radius, 35px width and height  */
+        input[type="button"] {
+            border-radius: 10px;
+            width: 35px;
+            height: 35px;
+
+        }
+
+        /* give class 'darkorchid' a darkorchid background color */
+        .memory {
+            background: darkorchid;
+        }
+
+        /* give class 'operator' a darkorange background color */
+        .operator {
+            background: darkorange;
+        }
+
+        /* give class 'clear' a red background color */
+        #clear {
+            background: red;
+        }
+
+        /* give class 'equal' a green background color  */
+        #equal {
+            background: green;
+        }
+    </style>
+
+
+</head>
+
+<body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="My Website.html" class="navbar-brand"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                            Code Life</a>
+                    </div>
+        
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <div>
+                            <ul class="nav navbar-nav ">
+                                <li><a href="My Website.html">Home</a></li>
+                                <li><a href="project1.html">Resume Temp</a></li>
+                                <li><a href="calculator.html">Calculator</a></li>
+                                <li><a href="imageGallery.html">Photo Blog</a></li>
+                                <li><a href="project4.html">Contact</a></li>
+        
+                            </ul>
+        
+        
+                        </div>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        
+    
+    <div id="container" class="jumbotron">
+        <div id="wrapper">
+            <h3>Calculator</h3>
+            <input type="text" id="display">
+            <div id="buttons">
+                <input type="button" value="mrc" class="memory">
+                <input type="button" value="m+" class="memory">
+                <input type="button" value="m-" class="memory">
+                <input type="button" value="/" class="operator" id="divide">
+                <input type="button" value="7" id="7">
+                <input type="button" value="8" id="8">
+                <input type="button" value="9" id="9">
+                <input type="button" value="*" class="operator" id="multiply">
+                <input type="button" value="4" id="4">
+                <input type="button" value="5" id="5">
+                <input type="button" value="6" id="6">
+                <input type="button" value="+" class="operator" id="add">
+                <input type="button" value="1" id="1">
+                <input type="button" value="2" id="2">
+                <input type="button" value="3" id="3">
+                <input type="button" value="-" class="operator" id="subtract">
+                <input type="button" value="0" value="0" id="0">
+                <input type="button" value="." value="." id="dot">
+                <input type="button" value="c" id="clear">
+                <input type="button" value="=" id="equal">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

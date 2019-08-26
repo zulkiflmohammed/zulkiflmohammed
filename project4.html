@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Me</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    input[type=email]
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .form {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="My Website.html" class="navbar-brand"><span class="glyphicon glyphicon-picture"
+            aria-hidden="true"></span>
+          Code Life</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div>
+          <ul class="nav navbar-nav ">
+            <li><a href="My Website.html">Home</a></li>
+            <li><a href="project1.html">Resume Temp</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="imageGallery.html">Photo Blog</a></li>
+            <li><a href="project4.html">Contact</a></li>
+
+          </ul>
+
+
+        </div>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+
+
+  <div class="container jumbotron">
+    <h2>Contact Me</h2>
+    <p>Please fill out the following form with any questions, comments or concerns you might have</p>
+
+    <div class="form">
+
+
+      <form action="/action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="email" name="email" placeholder="Your email..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
